@@ -1,55 +1,33 @@
-# CryptoInsight API
+# CryptoInsight – Cryptocurrency Portfolio Tracker
 
-Real-time cryptocurrency tracking and portfolio management API. Built with Python and FastAPI for high-performance async operations.
+A real-time crypto portfolio dashboard with live prices, charts, and market insights.
+
+🔗 **Live Demo:** [sercod.com/demos/cryptoinsight](https://sercod.com/demos/cryptoinsight/)
 
 ## Features
 
-- Real-time crypto price tracking (20+ coins)
-- Portfolio management & analytics
-- Price alert system with configurable thresholds
-- WebSocket for live price updates
-- Market analysis endpoints
-- Rate limiting & caching
+- 💰 **Portfolio Tracker** – Track holdings, P&L, and allocation
+- 📊 **Live Prices** – Real-time data from CoinGecko API
+- 📈 **Price Charts** – Interactive candlestick and line charts
+- 🔔 **Price Alerts** – Set custom alerts for price movements
+- 🌍 **Market Overview** – Top coins, gainers, and losers
+- 🔐 **Secure Storage** – Encrypted local portfolio data
 
 ## Tech Stack
 
-- Python 3.11+
-- FastAPI + Uvicorn
-- Pydantic v2
-- WebSockets
-- Redis (caching layer)
+- **Frontend:** React + TypeScript + Recharts
+- **API:** CoinGecko (free tier)
+- **State:** Zustand
+- **Styling:** Tailwind CSS
 
-## Quick Start
+## Getting Started
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-cp .env.example .env
-uvicorn main:app --reload
+git clone https://github.com/sercancosar7/cryptoinsight.git
+cd cryptoinsight
+npm install
+npm run dev
 ```
-
-## API Docs
-
-Visit `/docs` for interactive Swagger documentation.
-
-## Endpoints
-
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/crypto/prices` | List all crypto prices |
-| GET | `/api/v1/crypto/market` | Market overview |
-| GET | `/api/v1/crypto/{symbol}` | Specific crypto details |
-| POST | `/api/v1/portfolio` | Create/update portfolio |
-| GET | `/api/v1/portfolio/{user_id}` | Get user portfolio |
-| POST | `/api/v1/alerts` | Set price alert |
-| GET | `/api/v1/alerts/{user_id}` | Get user alerts |
-| WS | `/ws/prices` | Real-time price stream |
-
-## Environment Variables
-
-See `.env.example` for available configuration options.
 
 ## License
 
