@@ -1,34 +1,42 @@
-# CryptoInsight – Cryptocurrency Portfolio Tracker
+# CryptoInsight – Real-Time Cryptocurrency Dashboard
 
-A real-time crypto portfolio dashboard with live prices, charts, and market insights.
+Real-time cryptocurrency dashboard with portfolio tracking, alerts, and market analysis.
 
 🔗 **Live Demo:** [sercod.com/demos/cryptoinsight](https://sercod.com/demos/cryptoinsight/)
 
 ## Features
 
-- 💰 **Portfolio Tracker** – Track holdings, P&L, and allocation
-- 📊 **Live Prices** – Real-time data from CoinGecko API
-- 📈 **Price Charts** – Interactive candlestick and line charts
-- 🔔 **Price Alerts** – Set custom alerts for price movements
-- 🌍 **Market Overview** – Top coins, gainers, and losers
+- 💰 **Portfolio Tracker** – Track holdings, P&L, and allocation breakdown
+- 📊 **Live Price Charts** – Real-time charts powered by Chart.js
+- 🔔 **Price Alerts** – WebSocket-based alerts for price movements
+- 🌍 **Market Overview** – Top coins, gainers, losers, and volume data
+- 📈 **Market Analysis** – Technical indicators and trend summaries
 - 🔐 **Secure Storage** – Encrypted local portfolio data
 
 ## Tech Stack
 
-- **Frontend:** React + TypeScript + Recharts
-- **API:** CoinGecko (free tier)
-- **State:** Zustand
-- **Styling:** Tailwind CSS
+- **Backend:** Python + FastAPI
+- **Real-time:** WebSocket
+- **Frontend:** React
+- **Charts:** Chart.js
+- **Data:** CoinGecko API
 
 ## Getting Started
 
 ```bash
 git clone https://github.com/sercancosar7/cryptoinsight.git
 cd cryptoinsight
+
+# Backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+# Frontend (in a new terminal)
+cd frontend
 npm install
 npm run dev
 ```
 
 ## License
 
-MIT
+MIT – see [LICENSE](./LICENSE)
